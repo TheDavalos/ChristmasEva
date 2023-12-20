@@ -1,0 +1,1638 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+:root {
+    --rotateTreeTopperSpeed: 20s;
+    --rotateTree: 120s; 
+    --opacityTransition: .89s;
+}
+html {
+    color-scheme: dark light;
+    overflow: hidden;
+}
+body{
+    position: relative;
+    display: flex;
+    min-height: 101.2vh;
+    background-image: 
+    linear-gradient(
+        rgb(3, 5, 34),
+        rgb(55, 89, 199)60%, 
+        rgb(180, 123, 135)68%, 
+        rgb(255, 144, 130)70%, 
+        rgb(255, 180, 80)70.5%, 
+        snow 71%, 
+        rgb(189, 189, 189)77%, 
+        rgb(110, 110, 110) );
+    background-size: cover;
+}
+.earthAtmosphere {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    transform-style: preserve-3d;
+    perspective-origin: 50% calc(50% - 1em);
+    perspective: 50em;
+}
+.mainGreetingsContainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    transform-style: preserve-3d;
+}
+.mainGreetings {
+    position: absolute;
+    width: 100vw;
+    transform-style: preserve-3d;
+    text-align: center;
+}
+#greeting1{
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    padding-top: 1em;
+    top: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    text-align: center;
+    text-wrap: nowrap;
+    font-size: 1em;
+    font-weight: 600;
+    font-family: xmas;
+    color: rgb(233, 220, 233);
+    text-shadow: 0 .5em .5em rgb(5, 0, 5);
+    text-decoration: none;
+    cursor: pointer;
+}
+.theCross {
+    color: white;
+    text-shadow: 
+        0 -.2em .89em rgba(233, 8, 233, .55),
+        0 .3em .89em rgba(233, 233, 220, .89);
+}
+.countDownToXmasEva2023 {
+    width: 40%;
+    margin-top: -2.55em;
+    margin-left: 16.382em;
+    padding: .13em;
+    border-radius: .21em;
+    box-shadow: 0 0 .34em rgba(255, 255, 255, .89) inset;
+    background-color: rgba(5, 5, 5, .55); 
+    transform: translateX(-50%);
+    font-size: .67em;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(222, 222, 222); 
+    text-wrap: wrap;
+}
+#greeting2{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 13vw;
+    font-weight: 900;
+    font-family: xmasEvaM;
+    color: rgb(233, 233, 233);
+    text-shadow: 0 .089em .089em black;
+    transition: opacity var(--opacityTransition);
+}
+#greeting3{
+    position: absolute;
+    width: 100vw;
+    bottom: 6em;
+    left: 0em;
+    transform-style: preserve-3d;
+    transform: translateZ(-2em) rotateY(30deg);
+    font-size: 8vw;
+    transition: opacity var(--opacityTransition);
+}
+.greeting3-1 {
+    transform: translateZ(.1em) ;
+    color: rgb(0, 70, 0);
+}
+.greeting3-2 {
+    transform: translateZ(.12em);
+    color: rgb(0, 70, 0);
+}
+.greeting3-3 {
+    transform: translateZ(.14em);
+    color: rgb(0, 70, 0);
+}
+.greeting3-4 {
+    transform: translateZ(.16em);
+    color: rgb(0, 70, 0);
+}
+.greeting3-5 {
+    transform: translateZ(.18em);
+    color: rgb(0, 70, 0);
+}
+.greeting3-6 {
+    transform: translateZ(.20em);
+}
+.greeting3-7 {
+    transform: translateZ(.22em);
+}
+.greeting3-8 {
+    transform: translateZ(.24em);
+    color: rgb(70, 0, 0);
+}
+.greeting3-9 {
+    transform: translateZ(.26em);
+    color: rgb(70, 0, 0);
+}
+.greeting3-10 {
+    transform: translateZ(.28em);
+    color: rgb(70, 0, 0);
+}
+.greeting3-10Shadow, .greeting3-10Shadow .greetingSpanShadow {
+    transform: translateZ(.6em) translateY(5em) rotateX(189deg);
+    color: transparent;
+    text-shadow: 0 0 .25em rgba(0, 0, 0, .3);
+}
+.greetingSpan {
+    color: rgb(144, 144, 144);
+}
+.greeting3-1 .greetingSpan, .greeting3-2 .greetingSpan, .greeting3-10 .greetingSpan{
+    color: rgb(233, 233, 233);
+}
+.linksContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 89%;
+    left: 50%;
+    top: 1em;
+    z-index: 3;
+    transform: translateX(-50%);
+    font-size: .8em;
+    font-weight: 900;
+    text-shadow: 0 .5em .4em rgb(5, 0, 5);
+    align-items: center;
+    justify-content: space-between;
+}
+.theLinks {
+    padding: .25em;
+    background-color: rgba(233, 220, 233, .055);
+    border-radius: 40%;
+    box-shadow:
+    .5em 0em .15em rgba(0, 0, 0, .89),
+    -.5em 0em .15em rgba(0, 0, 0, .89),
+    1em 0em .15em rgba(177, 177, 233, .34),
+    -1em 0em .15em rgba(177, 177, 233, .34);
+    font-family: xmasEvaM;
+    color: rgb(199, 199, 199);
+    text-decoration: none;
+    text-wrap: nowrap;
+    cursor: pointer;
+}
+.schContainer {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100vw;
+    top: 7em;
+    bottom: 3em;
+    left: -2em;
+    transform: translateZ(-3em) translateX(10%) rotateY(30deg);
+    opacity: 1;
+    font-size: .89em;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    transition: opacity var(--opacityTransition);
+}
+.schItem {
+    margin-top: .89vh;
+    color: rgba(0, 0, 0, .89);
+    text-align: left;
+    text-shadow: 
+        0 .25em .5em green,
+        0 -.1em .3em white;
+}
+.schTime {
+    margin-top: .89vh;
+    color: rgba(0, 0, 0, .89);
+    text-align: right;
+    text-shadow: 
+        0 .25em .5em red,
+        0 -.1em .3em white;
+}
+.schFlakes {
+    color: rgba(255, 199, 199, .55);
+    text-shadow: 0 0 .13em white;
+}
+.foodMenuContainer {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0 1em;
+    overflow-y: scroll;
+    top: 6.39em;
+    right: .382em;
+    bottom: 1.3em;
+    left: .382em;
+    padding: 0 .55em;
+    background-image: 
+        radial-gradient(circle at 40%, transparent 25%, #5335, #3335 50%, #35e5 90%, transparent 97%),
+        radial-gradient(ellipse at 70%, transparent 28%, #33da 40%, #3335 50%, #eef5 75%, transparent),
+        radial-gradient(ellipse at left, transparent 35%, #3331, #33d5 40%, #e0e5 75%, transparent 93%);
+    border: .21em solid rgba(233, 233, 255, .55);
+    box-shadow: 0 0 .5em rgba(233, 233, 255, .89);
+    border-radius: .382em;
+    opacity: 1;
+    transition: opacity var(--opacityTransition);
+}
+.foodItem {
+    position: relative;
+    width: 98%;
+    top: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top-right-radius: .34em;
+    border-top-left-radius: .34em;
+    background-color: rgba(144, 144, 144, .34);
+    box-shadow: 0em -.13em .1em rgba(233, 233, 233, .34);
+    font-size: 1.5em; 
+    text-align: center;
+    color: rgba(199, 199, 199, .8);
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, .89);
+    text-shadow: 0 0 .2em rgba(0, 0, 0, .89);
+}
+.foodItemX {
+    position: relative;
+    width: 98%;
+    top: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: .5em 0em;
+    padding: .5em .5em;
+    background-color: rgba(144, 144, 144, .34);
+    border-bottom-right-radius: .34em;
+    border-bottom-left-radius: .34em;
+    box-shadow: 0em .23em .13em rgba(34, 34, 34, .34);
+    font-size: 1em; 
+    color: rgba(0, 0, 0, .89);
+    text-shadow: 0 0 .5em rgba(144, 144, 255, .89);
+}
+.foodMenuMeal {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    margin-top: 1em;
+    border-radius: .3em;
+    background-color: rgb(110, 89, 123);
+    box-shadow: 
+        0 .3em .25em rgba(5, 5, 5, .89),
+        inset 0 .3em .25em rgba(144, 144, 144, .89),
+        inset 0 -.3em .25em rgba(21, 21, 21, .55);
+    text-align: center;
+    color: rgb(177, 177, 177);
+}
+#inSnow {
+    position: absolute;
+    left: -50%;
+    transform-style: preserve-3d; 
+    transform: translateY(-4.20em);
+}
+.snowing{
+    position: absolute;
+    width: 200vw;
+    height: 120vh;
+    transform-style: preserve-3d;
+}
+#snowing1{transform: translateZ(-36em);}
+#snowing2{transform: translateZ(-34em);}
+#snowing3{transform: translateZ(-32em);}
+#snowing4{transform: translateZ(-30em);}
+#snowing5{transform: translateZ(-28em);}
+#snowing6{transform: translateZ(-26em);}
+#snowing7{transform: translateZ(-24em);}
+#snowing8{transform: translateZ(-22em);}
+#snowing9{transform: translateZ(-20em);}
+#snowing10{transform: translateZ(-18em);}
+#snowing11{transform: translateZ(-16em);}
+#snowing12{transform: translateZ(-14em);}
+#snowing13{transform: translateZ(-12em);}
+#snowing14{transform: translateZ(-10em);}
+#snowing15{transform: translateZ(-8em);}
+#snowing16{transform: translateZ(-6em);}
+#snowing17{transform: translateZ(-4em);}
+#snowing18{transform: translateZ(-2em);}
+#snowing19{transform: translateZ(0em);}
+#snowing20{transform: translateZ(2em);}
+#snowing21{transform: translateZ(4em);}
+.earth{
+    position: absolute;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+}
+.gift1Container {
+    position: absolute;
+    scale:.5;
+    bottom: 3em;
+    left: 0em;
+    transform-style: preserve-3d;
+    transform:  translateZ(-15em) translateY(-8em) translateX(-6em) rotateY(0deg);
+}
+.gift1 {
+    position: absolute;
+    transform-style: preserve-3d;
+}  
+.gift2Container {
+    position: absolute;
+    scale: .25;
+    bottom: 5em;
+    left: 0em;
+    transform-style: preserve-3d;
+    transform: translateZ(-28em) translateY(-30em) translateX(-8em) rotateZ(0deg);
+}
+.gift2 {
+    position: absolute;
+    transform-style: preserve-3d;
+}  
+.gift3Container {
+    position: absolute;
+    scale: .75;
+    bottom: 10em;
+    left: 13em;
+    transform-style: preserve-3d;
+    transform: translateZ(-23em) translateY(0em) translateX(-25em)  rotateY(35deg);
+}
+.gift3 {
+    position: absolute;
+    transform-style: preserve-3d;
+}  
+.giftSides {
+    position: absolute;
+    transform-style: preserve-3d;
+    width: 10em;
+    height: 10em;
+    background-image: 
+    repeating-conic-gradient(
+        from 0deg,
+        rgb(70, 0, 0) 0deg 45deg, 
+        rgb(0, 70, 0) 45deg 90deg,
+        rgb(70, 0, 0) 90deg 135deg, 
+        rgb(0, 70, 0) 135deg 180deg,
+        rgb(70, 0, 0) 180deg 225deg, 
+        rgb(0, 70, 0) 225deg 270deg,
+        rgb(70, 0, 0) 270deg 315deg, 
+        rgb(0, 70, 0) 315deg 360deg
+    );
+    box-shadow: 0em 0em .89em rgba(255, 255, 255, .63) inset;
+}
+.giftSide1 {transform: rotateY(90deg) translateZ(5em) translateX(-5em);}
+.giftSide2 {transform: rotateY(90deg) translateZ(-5em) translateX(-5em);}
+.giftSide3 {
+    transform: rotateY(90deg) rotateX(90deg) translateZ(-5em) translateX(-5em);
+    box-shadow: -1.5em -.1em 2em rgba(21, 21, 21, .55);
+}
+.giftSide4 {transform: rotateY(90deg) rotateX(90deg) translateZ(5em) translateX(-5em);}
+.giftSide5 {transform: rotateY(0deg) translateZ(10em);}
+.giftSide6 {transform: rotateY(0deg) translateZ(0em);}
+.theTreeTopper1 {
+    position: absolute;
+    transform-style: preserve-3d;
+    top: 0em;
+    left: 5.5em;
+    animation: rotateTreeTopper1 var(--rotateTreeTopperSpeed) infinite linear;
+}@keyframes rotateTreeTopper1 {
+    from {transform: rotateY(0deg)rotateZ(0deg);}
+    to {transform:rotateY(-360deg)rotateZ(360deg);}
+}
+.theTreeTopper2 {
+    position: absolute;
+    transform-style: preserve-3d;
+    top: 0em;
+    left: 5.5em;
+    animation: rotateTreeTopper2 var(--rotateTreeTopperSpeed) infinite linear;
+}@keyframes rotateTreeTopper2 {
+    from {transform: rotateY(0deg)rotateX(120deg) rotateZ(0deg);}
+    to {transform: rotateY(-360deg)rotateX(120deg) rotateZ(360deg);}
+}
+.theTreeTopper3 {
+    position: absolute;
+    transform-style: preserve-3d;
+    top: 0em;
+    left: 5.5em;
+    animation: rotateTreeTopper3 var(--rotateTreeTopperSpeed) infinite linear;
+}@keyframes rotateTreeTopper3 {
+    from {transform: rotateY(0deg) rotateX(240deg) rotateZ(0deg);}
+    to {transform: rotateY(-360deg) rotateX(240deg) rotateZ(-360deg);}
+}
+.treeTopper {
+    position: absolute;
+    width: 5em;
+    height: .1em;
+    top: -.25em;
+    left: -2.5em;
+    transform-style: preserve-3d;
+    border-radius: 50%;
+    background-image: radial-gradient( rgba(255, 21, 89, .89),34%,rgba(144, 21, 144, .55),55%, rgba(21, 21, 233, .13),76%, transparent); 
+    box-shadow: 0em 0em 3em .34em rgb(220, 220, 220), 0em 0em .2em .21em rgb(220, 220, 220);
+}
+.treeTopper1 {
+    transform: rotateZ(0deg) rotateX(90deg);
+}
+.treeTopper2 {
+    transform: rotateZ(30deg) rotateX(90deg);
+}
+.treeTopper3 {
+    transform: rotateZ(60deg) rotateX(90deg);
+}
+.treeTopper4 {
+    transform: rotateZ(90deg) rotateX(90deg);
+}
+.treeTopper5 {
+    transform: rotateZ(120deg) rotateX(90deg);
+}
+.treeTopper6 {
+    transform: rotateZ(150deg) rotateX(90deg);
+}
+.treeTopper7 {
+    transform: rotateZ(180deg) rotateX(90deg);
+}
+.treeTopper8 {
+    transform: rotateZ(210deg) rotateX(90deg);
+}
+.treeTopper9 {
+    transform: rotateZ(240deg) rotateX(90deg);
+}
+.treeTopper10 {
+    transform: rotateZ(270deg) rotateX(90deg);
+}
+.treeTopper11 {
+    transform: rotateZ(300deg) rotateX(90deg);
+}
+.treeTopper12 {
+    transform: rotateZ(330deg) rotateX(90deg);
+}
+.xmasTree {
+    position: absolute;
+    transform-style: preserve-3d;
+    width: 10em;
+    height: 10em;
+    bottom: 10em;
+    left: 60vw;
+    transform: rotateY(0deg) translateX(-.5em);
+    animation: rotateDavalo var(--rotateTree) infinite linear;
+}
+@keyframes rotateDavalo {
+    0% {transform: translateZ(-10em) translateX(-.5em) rotateY(0deg);}
+    100% {transform: translateZ(-10em) translateX(-.5em) rotateY(-360deg);}
+}
+.xmasTreeBalls {
+    position: absolute;
+    width: 1.55em;
+    height: 1.55em;
+    left: 5.2275em;
+    transform-style: preserve-3d;
+    border-radius: 50%;
+    background-image: radial-gradient(circle at top, transparent, 55%, #000);
+}
+
+.xmasTreeBallsShadow1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 49%;
+    transform: rotateX(90deg) ;
+    background-image: radial-gradient(#0008, #0000 75%);
+}
+.xmasTreeBallsShadow2 {
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: 250%;
+    transform: rotateX(90deg);
+    background-image: radial-gradient(#0002, #0000 75%);
+}
+.xmasTreeBallsShadow3 {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: 500%;
+    left: 0em;
+    transform: rotateX(90deg) ;
+    background-image: radial-gradient(#0001, #0000 75%);
+}
+
+/*Level 1*/
+.xmasTreeBall1 {
+    width: 5em;
+    height: 5em;
+    left: 3em;
+    animation: rotateC1 var(--rotateTree) infinite linear;
+}@keyframes rotateC1 {
+    0% {
+        transform: translateX(8em) translateZ(-8em) translateY(13em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(8em) translateZ(-8em) translateY(13em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform: translateX(8em) translateZ(-8em) translateY(13em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(8em) translateZ(-8em) translateY(13em) rotateY(270deg);
+        background-color: snow;
+    }
+    100% {
+        transform: translateX(8em) translateZ(-8em) translateY(13em) rotateY(360deg);
+        background-color: red;
+    }
+}
+.xmasTreeBall2 {
+    width: 5em;
+    height: 5em;
+    left: 3em;
+    animation: rotateC2 var(--rotateTree) infinite linear;
+}@keyframes rotateC2 {
+    0% {
+        transform: translateX(-8em) translateZ(-8em) translateY(13em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(-8em) translateZ(-8em) translateY(13em) rotateY(90deg);
+        background-color: whitesmoke;
+    }
+    50% {
+        transform: translateX(-8em) translateZ(-8em) translateY(13em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(-8em) translateZ(-8em) translateY(13em) rotateY(270deg);
+        background-color: whitesmoke;
+    }
+    100% {
+        transform: translateX(-8em) translateZ(-8em) translateY(13em) rotateY(360deg);
+        background-color: red;
+    }
+} 
+.xmasTreeBall3 {
+    width: 5em;
+    height: 5em;
+    left: 3em;
+    animation: rotateC3 var(--rotateTree) infinite linear;
+}@keyframes rotateC3 {
+    0% {
+        transform: translateX(8em) translateZ(8em) translateY(13em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(8em) translateZ(8em) translateY(13em) rotateY(90deg);
+        background-color: whitesmoke;
+    }
+    50% {
+        transform: translateX(8em) translateZ(8em) translateY(13em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(8em) translateZ(8em) translateY(13em) rotateY(270deg);
+        background-color: whitesmoke;
+    }
+    100% {
+        transform: translateX(8em) translateZ(8em) translateY(13em) rotateY(360deg);
+        background-color: red;
+    }
+}
+.xmasTreeBall4 {
+    width: 5em;
+    height: 5em;
+    left: 3em;
+    animation: rotateC4 var(--rotateTree) infinite linear;
+}@keyframes rotateC4 {
+    0% {
+        transform: translateX(-8em) translateZ(8em) translateY(13em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(-8em) translateZ(8em) translateY(13em) rotateY(90deg);
+        background-color: snow;       
+    }
+    50% {
+        transform: translateX(-8em) translateZ(8em) translateY(13em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(-8em) translateZ(8em) translateY(13em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(-8em) translateZ(8em) translateY(13em) rotateY(360deg);
+        background-color: red;
+    }
+}   
+.xmasTreeBall5 {
+    width: 5em;
+    height: 5em;
+    left: 3em;
+    animation: rotateC5 var(--rotateTree) infinite linear;
+}@keyframes rotateC5 {
+    0% {
+        transform: translateX(0em) translateZ(11.25em) translateY(13em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(0em) translateZ(11.25em) translateY(13em) rotateY(90deg);
+        background-color: snow;       
+    }
+    50% {
+        transform: translateX(0em) translateZ(11.25em) translateY(13em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(0em) translateZ(11.25em) translateY(13em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(0em) translateZ(11.25em) translateY(13em) rotateY(360deg);
+        background-color: red;
+    }
+}
+.xmasTreeBall6 {
+    width: 5em;
+    height: 5em;
+    left: 3em;
+    animation: rotateC6 var(--rotateTree) infinite linear;
+}@keyframes rotateC6 {
+    0% {
+        transform: translateX(0em) translateZ(-11.25em) translateY(13em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(0em) translateZ(-11.25em) translateY(13em) rotateY(90deg);
+        background-color: snow;       
+    }
+    50% {
+        transform: translateX(0em) translateZ(-11.25em) translateY(13em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(0em) translateZ(-11.25em) translateY(13em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(0em) translateZ(-11.25em) translateY(13em) rotateY(360deg);
+        background-color: red;
+    }
+}  
+.xmasTreeBall7 {
+    width: 5em;
+    height: 5em;
+    left: 3em;
+    animation: rotateC7 var(--rotateTree) infinite linear;
+}@keyframes rotateC7 {
+    0% {
+        transform: translateX(11.25em) translateZ(0em) translateY(13em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(11.25em) translateZ(0em) translateY(13em) rotateY(90deg);
+        background-color: snow;       
+    }
+    50% {
+        transform: translateX(11.25em) translateZ(0em) translateY(13em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(11.25em) translateZ(0em) translateY(13em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(11.25em) translateZ(0em) translateY(13em) rotateY(360deg);
+        background-color: red;
+    }
+}
+.xmasTreeBall8 {
+    width: 5em;
+    height: 5em;
+    left: 3em;
+    animation: rotateC8 var(--rotateTree) infinite linear;
+}@keyframes rotateC8 {
+    0% {
+        transform: translateX(-11.25em) translateZ(0em) translateY(13em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(-11.25em) translateZ(0em) translateY(13em) rotateY(90deg);
+        background-color: snow;       
+    }
+    50% {
+        transform: translateX(-11.25em) translateZ(0em) translateY(13em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(-11.25em) translateZ(0em) translateY(13em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(-11.25em) translateZ(0em) translateY(13em) rotateY(360deg);
+        background-color: red;
+    }
+}
+/*Level 1*/
+
+/*Level 2*/
+.xmasTreeBall9 {
+    width: 3em;
+    height: 3em;
+    left: 4.0em;
+    animation: rotateC9 var(--rotateTree) infinite linear;
+}@keyframes rotateC9 {
+    0% {
+        transform: translateX(5em) translateZ(-5em) translateY(8em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(5em) translateZ(-5em) translateY(8em) rotateY(90deg);
+        background-color: snow;       
+    }
+    50% {
+        transform: translateX(5em) translateZ(-5em) translateY(8em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(5em) translateZ(-5em) translateY(8em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(5em) translateZ(-5em) translateY(8em) rotateY(360deg);
+        background-color: red;
+    }
+}
+.xmasTreeBall10 {
+    width: 3em;
+    height: 3em;
+    left: 4.0em;
+    animation: rotateC10 var(--rotateTree) infinite linear;
+}@keyframes rotateC10 {
+    0% {
+        transform: translateX(-5em) translateZ(-5em) translateY(8em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(-5em) translateZ(-5em) translateY(8em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform: translateX(-5em) translateZ(-5em) translateY(8em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(-5em) translateZ(-5em) translateY(8em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(-5em) translateZ(-5em) translateY(8em) rotateY(360deg);
+        background-color: red;
+    }
+}
+.xmasTreeBall11 {
+    width: 3em;
+    height: 3em;
+    left: 4.0em;
+    animation: rotateC11 var(--rotateTree) infinite linear;
+}@keyframes rotateC11 {
+    0% {
+        transform: translateX(5em) translateZ(5em) translateY(8em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(5em) translateZ(5em) translateY(8em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform: translateX(5em) translateZ(5em) translateY(8em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(5em) translateZ(5em) translateY(8em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(5em) translateZ(5em) translateY(8em) rotateY(360deg);
+        background-color: red;
+    } 
+}
+.xmasTreeBall12 {
+    width: 3em;
+    height: 3em;
+    left: 4.0em;
+    animation: rotateC12 var(--rotateTree) infinite linear;
+}@keyframes rotateC12 {
+    0% {
+        transform: translateX(-5em) translateZ(5em) translateY(8em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(-5em) translateZ(5em) translateY(8em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform: translateX(-5em) translateZ(5em) translateY(8em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(-5em) translateZ(5em) translateY(8em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(-5em) translateZ(5em) translateY(8em) rotateY(360deg);
+        background-color: red;
+    }
+}
+.xmasTreeBall13 {
+    width: 3em;
+    height: 3em;
+    left: 4.0em;
+    animation: rotateC13 var(--rotateTree) infinite linear;
+}@keyframes rotateC13 {
+    0% {
+        transform: translateX(0em) translateZ(7em) translateY(8em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(0em) translateZ(7em) translateY(8em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform: translateX(0em) translateZ(7em) translateY(8em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(0em) translateZ(7em) translateY(8em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(0em) translateZ(7em) translateY(8em) rotateY(360deg);
+        background-color: red;
+    }
+}
+.xmasTreeBall14 {
+    width: 3em;
+    height: 3em;
+    left: 4.0em;
+    animation: rotateC14 var(--rotateTree) infinite linear;
+}@keyframes rotateC14 {
+    0% {
+        transform: translateX(0em) translateZ(-7em) translateY(8em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(0em) translateZ(-7em) translateY(8em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform: translateX(0em) translateZ(-7em) translateY(8em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(0em) translateZ(-7em) translateY(8em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(0em) translateZ(-7em) translateY(8em) rotateY(360deg);
+        background-color: red;
+    }   
+}
+.xmasTreeBall15 {
+    width: 3em;
+    height: 3em;
+    left: 4.0em;
+    animation: rotateC15 var(--rotateTree) infinite linear;
+}@keyframes rotateC15 {
+    0% {
+        transform: translateX(7em) translateZ(0em) translateY(8em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(7em) translateZ(0em) translateY(8em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform: translateX(7em) translateZ(0em) translateY(8em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(7em) translateZ(0em) translateY(8em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(7em) translateZ(0em) translateY(8em) rotateY(360deg);
+        background-color: red;
+    }   
+}
+.xmasTreeBall16 {
+    width: 3em;
+    height: 3em;
+    left: 4.0em;
+    animation: rotateC16 var(--rotateTree) infinite linear;
+}@keyframes rotateC16 {
+    0% {
+        transform: translateX(-7em) translateZ(0em) translateY(8em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(-7em) translateZ(0em) translateY(8em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform: translateX(-7em) translateZ(0em) translateY(8em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(-7em) translateZ(0em) translateY(8em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(-7em) translateZ(0em) translateY(8em) rotateY(360deg);
+        background-color: red;
+    }  
+}
+/*Level 2*/
+
+/*Level 3*/
+.xmasTreeBall17 {
+    width: 2em;
+    height: 2em;
+    left: 4.5em;
+    animation: rotateC17 var(--rotateTree) infinite linear;
+}@keyframes rotateC17 {
+    0% {
+        transform:translateX(3em) translateZ(-3em) translateY(5em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform:translateX(3em) translateZ(-3em) translateY(5em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform:translateX(3em) translateZ(-3em) translateY(5em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform:translateX(3em) translateZ(-3em) translateY(5em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform:translateX(3em) translateZ(-3em) translateY(5em) rotateY(360deg);
+        background-color: red;
+    }  
+}
+.xmasTreeBall18 {
+    width: 2em;
+    height: 2em;
+    left: 4.5em;
+    animation: rotateC18 var(--rotateTree) infinite linear;
+}@keyframes rotateC18 {
+    0% {
+        transform:translateX(-3em) translateZ(-3em) translateY(5em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform:translateX(-3em) translateZ(-3em) translateY(5em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform:translateX(-3em) translateZ(-3em) translateY(5em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform:translateX(-3em) translateZ(-3em) translateY(5em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform:translateX(-3em) translateZ(-3em) translateY(5em) rotateY(360deg);
+        background-color: red;
+    }  
+}
+.xmasTreeBall19 {
+    width: 2em;
+    height: 2em;
+    left: 4.5em;
+    animation: rotateC19 var(--rotateTree) infinite linear;
+}@keyframes rotateC19 {
+    0% {
+        transform: translateX(3em) translateZ(3em) translateY(5em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(3em) translateZ(3em) translateY(5em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform: translateX(3em) translateZ(3em) translateY(5em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(3em) translateZ(3em) translateY(5em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(3em) translateZ(3em) translateY(5em) rotateY(360deg);
+        background-color: red;
+    }  
+}
+.xmasTreeBall20 {
+    width: 2em;
+    height: 2em;
+    left: 4.5em;
+    animation: rotateC20 var(--rotateTree) infinite linear;
+}@keyframes rotateC20 {
+    0% {
+        transform: translateX(-3em) translateZ(3em) translateY(5em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(-3em) translateZ(3em) translateY(5em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform: translateX(-3em) translateZ(3em) translateY(5em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(-3em) translateZ(3em) translateY(5em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(-3em) translateZ(3em) translateY(5em) rotateY(360deg);
+        background-color: red;
+    }  
+}
+.xmasTreeBall21 {
+    width: 2em;
+    height: 2em;
+    left: 4.5em;
+    animation: rotateC21 var(--rotateTree) infinite linear;
+}@keyframes rotateC21 {
+    0% {
+        transform:translateX(0em) translateZ(-4em) translateY(5em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform:translateX(0em) translateZ(-4em) translateY(5em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform:translateX(0em) translateZ(-4em) translateY(5em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform:translateX(0em) translateZ(-4em) translateY(5em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform:translateX(0em) translateZ(-4em) translateY(5em) rotateY(360deg);
+        background-color: red;
+    }  
+}
+.xmasTreeBall22 {
+    width: 2em;
+    height: 2em;
+    left: 4.5em;
+    animation: rotateC22 var(--rotateTree) infinite linear;
+}@keyframes rotateC22 {
+    0% {
+        transform:translateX(0em) translateZ(4em) translateY(5em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform:translateX(0em) translateZ(4em) translateY(5em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform:translateX(0em) translateZ(4em) translateY(5em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform:translateX(0em) translateZ(4em) translateY(5em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform:translateX(0em) translateZ(4em) translateY(5em) rotateY(360deg);
+        background-color: red;
+    }  
+}
+.xmasTreeBall23 {
+    width: 2em;
+    height: 2em;
+    left: 4.5em;
+    animation: rotateC23 var(--rotateTree) infinite linear;
+}@keyframes rotateC23 {
+    0% {
+        transform: translateX(4em) translateZ(0em) translateY(5em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(4em) translateZ(0em) translateY(5em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform: translateX(4em) translateZ(0em) translateY(5em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(4em) translateZ(0em) translateY(5em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(4em) translateZ(0em) translateY(5em) rotateY(360deg);
+        background-color: red;
+    }  
+}
+.xmasTreeBall24 {
+    width: 2em;
+    height: 2em;
+    left: 4.5em;
+    animation: rotateC24 var(--rotateTree) infinite linear;
+}@keyframes rotateC24 {
+    0% {
+        transform: translateX(-4em) translateZ(0em) translateY(5em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(-4em) translateZ(0em) translateY(5em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform: translateX(-4em) translateZ(0em) translateY(5em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(-4em) translateZ(0em) translateY(5em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(-4em) translateZ(0em) translateY(5em) rotateY(360deg);
+        background-color: red;
+    }  
+}
+/*Level 3*/
+
+/*Level 4*/
+.xmasTreeBall25 {
+    width: 1.55em;
+    height: 1.55em;
+    left: 4.7em;
+    animation: rotateC25 var(--rotateTree) infinite linear;
+}@keyframes rotateC25 {
+    0% {
+        transform: translateX(1.55em) translateZ(1.55em) translateY(3em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(1.55em) translateZ(1.55em) translateY(3em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform: translateX(1.55em) translateZ(1.55em) translateY(3em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(1.55em) translateZ(1.55em) translateY(3em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(1.55em) translateZ(1.55em) translateY(3em) rotateY(360deg);
+        background-color: red;
+    }  
+}
+.xmasTreeBall26 {
+    width: 1.55em;
+    height: 1.55em;
+    left: 4.7em;
+    animation: rotateC26 var(--rotateTree) infinite linear;
+}@keyframes rotateC26 {
+    0% {
+        transform: translateX(1.55em) translateZ(-1.55em) translateY(3em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(1.55em) translateZ(-1.55em) translateY(3em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform: translateX(1.55em) translateZ(-1.55em) translateY(3em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(1.55em) translateZ(-1.55em) translateY(3em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(1.55em) translateZ(-1.55em) translateY(3em) rotateY(360deg);
+        background-color: red;
+    }  
+}
+.xmasTreeBall27 {
+    width: 1.55em;
+    height: 1.55em;
+    left: 4.7em;
+    animation: rotateC27 var(--rotateTree) infinite linear;
+}@keyframes rotateC27 {
+    0% {
+        transform: translateX(-1.55em) translateZ(-1.55em) translateY(3em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(-1.55em) translateZ(-1.55em) translateY(3em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform: translateX(-1.55em) translateZ(-1.55em) translateY(3em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(-1.55em) translateZ(-1.55em) translateY(3em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(-1.55em) translateZ(-1.55em) translateY(3em) rotateY(360deg);
+        background-color: red;
+    }  
+}
+.xmasTreeBall28 {
+    width: 1.55em;
+    height: 1.55em;
+    left: 4.7em;
+    animation: rotateC28 var(--rotateTree) infinite linear;
+}@keyframes rotateC28 {
+    0% {
+        transform: translateX(-1.55em) translateZ(1.55em) translateY(3em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(-1.55em) translateZ(1.55em) translateY(3em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform: translateX(-1.55em) translateZ(1.55em) translateY(3em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(-1.55em) translateZ(1.55em) translateY(3em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(-1.55em) translateZ(1.55em) translateY(3em) rotateY(360deg);
+        background-color: red;
+    }  
+}
+/*Level 4*/
+
+/*Level 5*/
+.xmasTreeBall29 {
+    width: 1.21em;
+    height: 1.21em;
+    left: 4.9em;
+    animation: rotateC29 var(--rotateTree) infinite linear;
+}@keyframes rotateC29 {
+    0% {
+        transform: translateX(-.8em) translateZ(.8em) translateY(2em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(-.8em) translateZ(.8em) translateY(2em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform: translateX(-.8em) translateZ(.8em) translateY(2em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(-.8em) translateZ(.8em) translateY(2em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(-.8em) translateZ(.8em) translateY(2em) rotateY(360deg);
+        background-color: red;
+    } 
+}
+.xmasTreeBall30 {
+    width: 1.21em;
+    height: 1.21em;
+    left: 4.9em;
+    animation: rotateC30 var(--rotateTree) infinite linear;
+}@keyframes rotateC30 {
+    0% {
+        transform: translateX(.8em) translateZ(-.8em) translateY(2em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(.8em) translateZ(-.8em) translateY(2em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform: translateX(.8em) translateZ(-.8em) translateY(2em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(.8em) translateZ(-.8em) translateY(2em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(.8em) translateZ(-.8em) translateY(2em) rotateY(360deg);
+        background-color: red;
+    } 
+}
+.xmasTreeBall31 {
+    width: 1.21em;
+    height: 1.21em;
+    left: 4.9em;
+    animation: rotateC31 var(--rotateTree) infinite linear;
+}@keyframes rotateC31 {
+    0% {
+        transform: translateX(-.8em) translateZ(-.8em) translateY(2em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(-.8em) translateZ(-.8em) translateY(2em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform: translateX(-.8em) translateZ(-.8em) translateY(2em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(-.8em) translateZ(-.8em) translateY(2em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(-.8em) translateZ(-.8em) translateY(2em) rotateY(360deg);
+        background-color: red;
+    } 
+}
+.xmasTreeBall32 {
+    width: 1.21em;
+    height: 1.21em;
+    left: 4.9em;
+    animation: rotateC32 var(--rotateTree) infinite linear;
+}@keyframes rotateC32 {
+    0% {
+        transform: translateX(.8em) translateZ(.8em) translateY(2em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(.8em) translateZ(.8em) translateY(2em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform: translateX(.8em) translateZ(.8em) translateY(2em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(.8em) translateZ(.8em) translateY(2em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(.8em) translateZ(.8em) translateY(2em) rotateY(360deg);
+        background-color: red;
+    } 
+}
+/*Level 5*/
+
+/*Level 6*/
+.xmasTreeBall33 {
+    width: .55em;
+    height: .55em;
+    
+    animation: rotateC33 var(--rotateTree) infinite linear;
+}@keyframes rotateC33 {
+    0% {
+        transform: translateX(-.34em) translateZ(.34em) translateY(1em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(-.34em) translateZ(.34em) translateY(1em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform: translateX(-.34em) translateZ(.34em) translateY(1em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(-.34em) translateZ(.34em) translateY(1em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(-.34em) translateZ(.34em) translateY(1em) rotateY(360deg);
+        background-color: red;
+    } 
+}
+.xmasTreeBall34 {
+    width: .55em;
+    height: .55em;
+    animation: rotateC34 var(--rotateTree) infinite linear;
+}@keyframes rotateC34 {
+    0% {
+        transform: translateX(.34em) translateZ(-.34em) translateY(1em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(.34em) translateZ(-.34em) translateY(1em) rotateY(90deg);
+        background-color: snow;
+    }
+    50% {
+        transform: translateX(.34em) translateZ(-.34em) translateY(1em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(.34em) translateZ(-.34em) translateY(1em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(.34em) translateZ(-.34em) translateY(1em) rotateY(360deg);
+        background-color: red;
+    } 
+}
+.xmasTreeBall35 {
+    width: .55em;
+    height: .55em;
+    animation: rotateC35 var(--rotateTree) infinite linear;
+}@keyframes rotateC35 {
+    0% {
+        transform: translateX(.34em) translateZ(.34em) translateY(1em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(.34em) translateZ(.34em) translateY(1em) rotateY(90deg);
+        background-color: snow;       
+    }
+    50% {
+        transform: translateX(.34em) translateZ(.34em) translateY(1em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(.34em) translateZ(.34em) translateY(1em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(.34em) translateZ(.34em) translateY(1em) rotateY(360deg);
+        background-color: red;
+    } 
+}
+.xmasTreeBall36 {
+    width: .55em;
+    height: .55em;
+    animation: rotateC36 var(--rotateTree) infinite linear;
+}@keyframes rotateC36 {
+    0% {
+        transform: translateX(-.34em) translateZ(-.34em) translateY(1em) rotateY(0deg);
+        background-color: red;
+    }
+    25% {
+        transform: translateX(-.34em) translateZ(-.34em) translateY(1em) rotateY(90deg);
+        background-color: snow;       
+    }
+    50% {
+        transform: translateX(-.34em) translateZ(-.34em) translateY(1em) rotateY(180deg);
+        background-color: green;
+    }
+    75% {
+        transform: translateX(-.34em) translateZ(-.34em) translateY(1em) rotateY(270deg);
+        background-color:snow;
+    }
+    100% {
+        transform: translateX(-.34em) translateZ(-.34em) translateY(1em) rotateY(360deg);
+        background-color: red;
+    } 
+}
+/*Level 6*/
+.displayNone {
+    transition: opacity var(--opacityTransition);
+    opacity: 0;
+}
+
+@font-face {
+    src: url("Rockybilly.ttf");
+    font-family: xmas;
+}
+@font-face {
+    src: url("WORDSOFLOVE.ttf");
+    font-family: xmasEva;
+}
+@font-face {
+    src: url("Melodice.ttf");
+    font-family: xmasEvaM;
+}
+
+@media (min-width: 350px) {
+    .schContainer {
+        font-size: 1em;
+        
+    }
+}
+@media (min-width: 450px) {
+    .foodMenuContainer {
+        grid-template-columns: 1fr 1fr;
+    }
+    .theLinks {
+        font-size: 1.5em;
+    }
+    #greeting3{
+        font-size: 6.7vw;
+    }
+}
+@media (min-width: 550px) {
+    .schContainer {
+        font-size: 1.1em;
+    }   
+    .theLinks {
+        font-size: 2em;
+    }
+    #greeting3{
+        font-size: 5.3vw;
+    }
+}
+@media (min-width: 650px) {
+    .schContainer {
+        font-size: 1.18em; 
+    }
+    .theLinks {
+        font-size: 2.2em;
+    }
+    #greeting3{
+        font-size: 4.5vw;
+    }
+}
+@media (min-width: 750px) {
+    .schContainer {
+        font-size: 1.3em;
+    }
+    .theLinks {
+        font-size: 2.5em;
+    }
+    .foodMenuContainer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #greeting3{
+        font-size: 3.8vw;
+    }
+}
+@media (min-width: 850px) {
+    .schContainer {grid-template-columns: repeat(4, 1fr);
+        transform: translateZ(-3em) translateX(10%) rotateY(15deg);
+        font-size: 1.5em;
+    }
+    #greeting3{
+        font-size: 3.3vw;
+    }
+}
+@media (min-width: 950px) {
+    .schContainer {
+        font-size: 1.6em;
+    }
+    #greeting3{
+    font-size: 3vw;
+    }  
+}
+@media (min-width: 1050px) {
+    .schContainer {
+        font-size: 1.7em;
+    }
+    .foodMenuContainer {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    #greeting3{
+        font-size: 2.7vw;
+    }  
+}
+@media (min-width: 1150px) {
+    .schContainer {
+        font-size: 1.7em;
+    }
+    #greeting3{
+        font-size: 2.4vw;
+    }  
+}
+@media (min-width: 1250px) {
+    .schContainer {
+        font-size: 1.8em;
+    }
+    .foodMenuContainer {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    #greeting3{
+        font-size: 2.1vw;
+    }  
+}
+@media (min-width: 1350px) {
+    .schContainer {
+        font-size: 1.9em;
+    }
+    #greeting3{
+        font-size: 2vw;
+    }  
+}
